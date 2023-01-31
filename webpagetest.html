@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color Changing Boxes and Web Protocols</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      line-height: 1.5;
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+      margin: 10px;
+      background-color: blue;
+      border: 1px solid black;
+    }
+
+    .box:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+
+    #name-input {
+      margin-bottom: 20px;
+      font-size: 18px;
+      padding: 10px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-top: 50px;
+    }
+
+    .section {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Color Changing Boxes</h1>
+  <p>Take a break and play with these color changing boxes! It's important to prioritize our mental health and engage in activities that bring joy and relaxation.</p>
+  <div class="container">
+    <input type="text" id="name-input" placeholder="Enter your name">
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+  </div>
+  <script>
+    const nameInput = document.querySelector("#name-input");
+    const boxes = document.querySelectorAll(".box");
+    boxes.forEach(function(box) {
+      box.addEventListener("click", function() {
+        const color = this.style.backgroundColor === "blue" ? "red" : "blue";
+        this.style.backgroundColor = color;
+        alert("Hello, " + nameInput.value + "! The color of the box has changed to " + color + ".");
+      });
+    });
+  </script>
+
+  <div class="section">
+    <h2>The History of HTTP</h2>
+    <p>HTTP (Hypertext Transfer Protocol) is the foundation of data communication for the World Wide Web. It was developed by Tim Berners-Lee and the World Wide Web Consortium (W3C) in 1989 and has been widely adopted as the standard for transmitting data over the web. HTTP is a client-server protocol, where a client (such as a web browser) sends a request to a server and the server returns a response.</p>
+  </div>
+
+  <div class="section">
+    <h2>The History of HTTPS</h2>
+    <p>
+        Web 3.0 refers to the next evolution of the internet, characterized by a shift from a centralized web, dominated by large tech companies, to a decentralized web, powered by blockchain technology and decentralized networks. The goal of web 3.0 is to give users more control over their personal data and digital identity, as well as to create a more equitable, open and transparent online ecosystem. It emphasizes the use of decentralized applications (dApps) built on blockchain technology that offer secure and transparent data storage, tamper-proof record-keeping, and peer-to-peer transactions. This creates an environment where users can transact and exchange value directly with each other, without intermediaries, thereby increasing privacy and security.
+        </p>
+        
+        <p>
+        Web 3.0 is the next generation of the internet, where data and the internet are decentralized and controlled by users, rather than large corporations. This new iteration of the web is built on top of blockchain technology and decentralized networks, which provides a more secure, transparent and equitable environment for users to interact, transact and exchange information.
+        
+        Some of the key features of web 3.0 include:
+        
+        1. Decentralization: Web 3.0 applications are built on decentralized networks, which eliminate the need for intermediaries, increase security and give users more control over their data.
+        
+        2. Personal Data Management: Web 3.0 allows users to store and control their own personal data, making it less vulnerable to data breaches and providing a higher level of privacy.
+        
+        3. Digital Identity: Web 3.0 provides a secure, self-sovereign digital identity that allows users to control their online presence and access a range of decentralized applications and services.
+        
+        4. Dapps: Decentralized applications, or dApps, are an integral part of web 3.0, enabling users to participate in decentralized networks, interact with each other and transact with one another without intermediaries.
+        
+        5. Interoperability: Web 3.0 applications are designed to be compatible with each other, enabling seamless integration and providing a more seamless user experience.
+        
+        The aim of web 3.0 is to create a more open, secure, and equitable online ecosystem that prioritizes user control and privacy, and reduces the power of large corporations.
+        </p>
+    </div>        
