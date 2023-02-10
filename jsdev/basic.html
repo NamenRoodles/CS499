@@ -1,104 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <style>
-        body {
-          font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-          text-align: center;
-          padding: 50px;
-        }
-    
-        h1 {
-          font-size: 48px;
-          margin-bottom: 20px;
-        }
-    
-        p {
-          font-size: 18px;
-          margin-bottom: 20px;
-          line-height: 1.5;
-          width: 50%;
-          margin: 0 auto;
-          background-color: aquamarine;
-        }
-    
-        .box {
-          width: 80px;
-          height: 100px;
-          display: inline-block;
-          margin: 5px;
-          background-color: plum;
-          border: 1px solid black;
-        }
-        .box2 {
-          width: 80px;
-          height: 100px;
-          display: inline-block;
-          margin: 5px;
-          background-color: violet;
-          border: 1px solid black;
-        }
-    
-        .box:hover {
-          cursor: pointer;
-          opacity: 0.8;
-        }
-    
-        .container {
-          margin-top: 50px;
-        }
-    
-        #name-input {
-          margin-bottom: 20px;
-          font-size: 18px;
-          padding: 10px;
-        }
-    
-        h2 {
-          font-size: 24px;
-          margin-top: 50px;
-        }
-    
-        .section {
-          margin-top: 50px;
-        }
-
-      </style>
     <head>
+      <link rel="stylesheet" href="style.css">
         <title>Innovation at CC</title>
-
-
-
-
     </head>
     <body>
       <h1>Your schedule today...</h1>
+      <h2 id="date"></h2>
       <div>
         <div class='box' id="hr1"></div>
-        <div class='box2' id="hr2"></div>
+        <div class='box' id="hr2"></div>
         <div class='box' id="hr3"></div>
-        <div class='box2' id="hr4"></div>
+        <div class='box' id="hr4"></div>
         <div class='box' id="hr5"></div>
-        <div class='box2' id="hr6"></div>
+        <div class='box' id="hr6"></div>
         <div class='box' id="hr7"></div>
-        <div class='box2' id="hr8"></div>
+        <div class='box' id="hr8"></div>
         <div class='box' id="hr9"></div>
-        <div class='box2' id="hr10"></div>
+        <div class='box' id="hr10"></div>
         <div class='box' id="hr11"></div>
-        <div class='box2' id="hr12"></div>
+        <div class='box' id="hr12"></div>
       </div>
       <div>
-        <div class='box2' id="hr13"></div>
+        <div class='box' id="hr13"></div>
         <div class='box' id="hr14"></div>
-        <div class='box2' id="hr15"></div>
+        <div class='box' id="hr15"></div>
         <div class='box' id="hr16"></div>
-        <div class='box2' id="hr17"></div>
+        <div class='box' id="hr17"></div>
         <div class='box' id="hr18"></div>
-        <div class='box2' id="hr19"></div>
+        <div class='box' id="hr19"></div>
         <div class='box' id="hr20"></div>
-        <div class='box2' id="hr21"></div>
+        <div class='box' id="hr21"></div>
         <div class='box' id="hr22"></div>
-        <div class='box2' id="hr23"></div>
+        <div class='box' id="hr23"></div>
         <div class='box' id="hr24"></div>
+      </div>
+      <div class="conflict" id="conflict-box">
+        No Conflicts
       </div>
 
 
@@ -107,7 +45,7 @@
         Please enjoy our calender. Our grade depends on it.
       </p>
 
-
+      <script src="script.js"></script>
     </body>
 
 
