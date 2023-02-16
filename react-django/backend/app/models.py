@@ -4,3 +4,5 @@ from django.db import models
 class React(models.Model):
     user = models.CharField(max_length=50)
     schedule = models.FileField()
+    def __str__(self):
+        return f'{self.title}'
