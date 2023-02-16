@@ -1,15 +1,4 @@
-import { useState } from 'react'
-import WeekDisplay from './components/WeekDisplay'
-import Calendar from './components/Calendar'
-import ConflictAlert from './components/ConflictAlert'
-import FormInput from './components/FormInput'
-import './App.css';
-import DayDisplay from './components/DayDisplay'
-import EventDisplay from './components/EventDisplay'
-
-
-function App() {
-  const eventsToday = [
+[
     {
       "title": "Out of Ashes Exhibition",
       "date_time": "2/16/2023 08:00 AM",
@@ -74,48 +63,3 @@ function App() {
       "description": "Geeks Who Drink Trivia Night at Jack Quinn's Irish Alehouse & Pub.Modeled after pub quizzes in Ireland and the U.K., Geeks Who Drink is an authentic homegrown trivia quiz. It's a great way to drink with friends, without burning brain cells. And it's where useless knowledge means everything.Our quizzes cover everything from Hungary to The Hunger Games, from science to sports, from the Billboard Hot 100 to Better Call Saul.Each quiz consists of seven rounds of eight questions each, in a variety of formats, including audio and visual rounds.Teams can be up to six players, so bring your smartest friends (or some likable dummies)\u2014or come solo. We can always help you join a team! No reservations needed, just show up!Winning teams get bar cash and other prizes, depending on the venue. Bonus questions sprinkled throughout the quiz will net you additional goodies. But mostly it's about establishing your dominance\u2014or at least pleasantly surprising yourself. You're into that, right?\r\n"
     }
   ]
-  const mylist = (someArray) =>{
-    const listItems = someArray.map((item) =>
-    <li>
-      <EventDisplay title = {item.title} description = {item.description}/>
-    </li>
-
-    //<li title = {item.title}>{item.description} </li> 
-    )
-    return(
-      <ol>
-        {listItems}
-      </ol>
-    )
-  }
-
-  const dateToday = new Date()
-  const weekdays = {0:"sunday", 1:"monday", 2:"tuesday", 3:"wednesday", 4:"thursday", 5:"friday", 6:"saturday"}
-  const months = {0:"January", 1:"February", 2:"March", 3:"April", 4:"May", 5:"June", 6:"July", 7:"August",
-  8:"September", 9:"October", 10:"November", 11:"December"}
-  const dateString = `${weekdays[dateToday.getDay()]} ${months[dateToday.getMonth()]} ${dateToday.getDate()}, ${dateToday.getFullYear()}`
-  console.log(dateToday)
-
-  return (
-    <div className="App">
-      
-      <header className="App-header">
-        <h1> Your Day, Today :3 </h1>
-        <DayDisplay curDate= {dateString}/>
-        <ConflictAlert/>
-        <WeekDisplay/>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <FormInput/>
-        <h2>Events Near You:</h2>
-        <EventDisplay title={'fun run'} description={'its a run thats fun!'}/>
-        {mylist(eventsToday)}
-        Some fun facts about platypusses. They are lay eggs, and in spanish they are called 'ornitorhincos'
-        <Calendar/>
-      </header>
-    </div>
-  );
-}
-
-export default App;
