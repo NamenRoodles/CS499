@@ -7,6 +7,7 @@ import './App.css';
 import DayDisplay from './components/DayDisplay'
 import EventDisplay from './components/EventDisplay'
 
+import Events from './components/Events'
 
 function App() {
   const dateToday = new Date()
@@ -99,7 +100,8 @@ function App() {
       
       <header className="App-header">
         <h1> Your Day, Today :3 </h1>
-        <DayDisplay curDate= {dateString}/>
+        <DayDisplay curDate= {dateString}/> 
+        <Events/>
         <ConflictAlert/>
         <WeekDisplay/>
         <p>
