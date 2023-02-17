@@ -16,8 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from app.views import *
+from rest_framework import routers
 
-urlpatterns = [
+router = routers.DefaultRouter()
+
+urlpatterns = router.urls
+
+urlpatterns += [
     path('admin/', admin.site.urls),
-    path('', ReactView.as_view(), name='anything')
+    path('', ReactView.as_view(), name='anything'),
+    path('react/', ReactView.as_view())
 ]
