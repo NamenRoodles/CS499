@@ -3,12 +3,13 @@ import React from 'react'
 
 const EventDisplay = ({title, date_time, org_name, location, description}) => {
   return (
-    <div>
+    <div className='event'>
         <h1>
-            {title}
+            Event: {title}
         </h1>
+        <h2 style={{fontSize: '27px'}}>When: {date_time}</h2>
         <p>{description}</p>
-        <button>join event!</button>
+        <button className='btn'>Join!</button>
     </div>
   )
 }

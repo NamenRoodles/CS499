@@ -25,5 +25,6 @@ urlpatterns = router.urls
 urlpatterns += [
     path('admin/', admin.site.urls),
     path('', ReactView.as_view(), name='anything'),
-    path('react/', ReactView.as_view())
+    path('react/', ReactView.as_view()),
+    path('EventStuff/', EventView.as_view())
 ]

@@ -22,18 +22,23 @@ from django.contrib.auth import views as auth_views
 from django.urls import path, re_path, include
 from django.shortcuts import render
 from user_logon import views as user_views
+from app.views import EventView
+from rest_framework import routers
 
+router = routers.DefaultRouter()
+urlpatterns = router.urls
 def render_react(request):
-    return render(request, "index.html")
+    return render(request, "index.html")    
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('register/', user_views.RegisterView.as_view(), name='users-register'),  # This is what we added
+urlpatterns += [
+    path('admin/', admin.site.urls),  # This is what we added
+    path('home', render_react),
+    path('EventStuff/', EventView.as_view())
 
     # path('register/', user_views.register, name ='register'),
     # path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     # path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='login'),
 
-    re_path(r"^$", render_react),
-    re_path(r"r^(?:.*)/$", render_react)
+    # re_path(r"^$", render_react),
+    # re_path(r"r^(?:.*)/$", render_react)
 ]

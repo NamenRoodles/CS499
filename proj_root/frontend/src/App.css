@@ -1,17 +1,16 @@
 .App {
   text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(215, 208, 208);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 h1 {
   background-color: #282c34;
   display: flex;
@@ -38,14 +37,15 @@ h1 {
   padding: 30px;
 }
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  background-color: #395ea8;
+  min-height: 17vh;
+  min-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: rgb(255, 255, 255);
+  font-size: 5vh;
 }
 .button-color-1 {
   background-color: rgb(78, 104, 151);
@@ -120,27 +120,43 @@ input[type="submit"]:hover {
 
 
 }
+.eventSection{
+  width: 80%; 
+  border-style: inset;
+  border-color: rgb(141, 123, 22);
+  border-width: 10px;
+  
+}
+
+.event{
+  border-style: inset;
+  border-color: rgb(218, 190, 34);
+  border-width: 10px;
+  margin: 4%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 2%;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
 
 .btn{
-  background-color: rgb(78, 104, 151);
-  min-height: 50px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: rgb(155, 190, 206);
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 14px 24px 16px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 200ms, background 200ms;
+  background: lightslategray;
+  color: #000000;
+  box-shadow: 0 0 0 3px #000000 inset;
 }
-
-.App-link {
-  color: #61dafb;
+.btn:hover{
+background:rgb(92, 102, 112) ;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn:active{
+  color:rgb(177, 183, 195)
 }
