@@ -1,20 +1,18 @@
 import { useState, useLayoutEffect, useEffect } from 'react'
 import WeekDisplay from './components/WeekDisplay'
 import Calendar from './components/Calendar'
-import ConflictAlert from './components/ConflictAlert'
-import FormInput from './components/FormInput'
 import './App.css';
-import DayDisplay from './components/DayDisplay'
 import EventDisplay from './components/EventDisplay'
 import axios from 'axios'
+import ServerSubmit from './components/ServerSubmit';
 
 //import Events from './components/Events'
 
 
 function App() {
-  const giveMeEvents = async () => {
+  const giveMeEvents = async (first_try) => {
     try{
-      const response = await axios.get('http://127.0.0.1:8000/EventStuff/?format=json')
+      const response = await axios.get(first_try)
       const listOfEvents = response.data
       console.log("eventlog called")
       const eventlist = listOfEvents.map((item) => {
@@ -27,7 +25,6 @@ function App() {
       console.log ("hi")
 
       updateCurEvents(eventlist)
-      //console.log('its infinite')
     }catch(error){
       console.log('oops')
       const emptyEvent = () => <EventDisplay title={'No Events'} description = {'¯\\_(ツ)_/¯'}/>
@@ -36,6 +33,7 @@ function App() {
   }
   
   // states///////////////////////////////////////
+  const [goHere, setGoHere] = useState(defaultURL)
 
   const [curEvents, updateCurEvents] = useState(() => <EventDisplay title={'No Events'} description = {'¯\\_(ツ)_/¯'}/>)
 
@@ -51,6 +49,7 @@ function App() {
       <header className= 'App-header'>Colorado Springs Computer Science Calendar Scheduler</header>
       <h2>Welcome!</h2>
       <Calendar/>
+      <h3>Server to check <ServerSubmit/></h3>
       <h2>Events for today:</h2>
       <div className='eventSection'>
         {curEvents}
