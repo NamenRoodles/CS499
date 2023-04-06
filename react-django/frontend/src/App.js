@@ -1,61 +1,58 @@
 import { useState, useLayoutEffect, useEffect } from 'react'
+import {Route, Routes, Navigate, useNavigate} from "react-router-dom"
 import WeekDisplay from './components/WeekDisplay'
 import Calendar from './components/Calendar'
 import './App.css';
 import EventDisplay from './components/EventDisplay'
 import axios from 'axios'
-import ServerSubmit from './components/ServerSubmit';
+import ServerSubmit from './components/ServerSubmit'
+import MainPage from './components/MainPage'
+import SignInPage from './components/SignInPage';
 
-//import Events from './components/Events'
+import {auth} from './fire-config'
 
+import { onAuthStateChanged } from 'firebase/auth';
 
 function App() {
-  const giveMeEvents = async (first_try) => {
-    try{
-      const response = await axios.get(first_try)
-      const listOfEvents = response.data
-      console.log("eventlog called")
-      const eventlist = listOfEvents.map((item) => {
-        return (
-          <EventDisplay title={item.title}
-           description = {item.description} date_time ={item.date_time} org_name = {item.org_name}
-           location = {item.location}/>
-        )
-      })
-      console.log ("hi")
 
-      updateCurEvents(eventlist)
-    }catch(error){
-      console.log('oops')
-      const emptyEvent = () => <EventDisplay title={'No Events'} description = {'¯\\_(ツ)_/¯'}/>
-      updateCurEvents(emptyEvent)
+
+  //signinpage needs register or login information, thinking about passing in setState as props
+  //const [auth, setAuth] = useState(FireAuth)
+  const [isLoggedIn, setIsLoggedIn] =  useState(false)
+  const [curUser, setCurUser] = useState({})
+
+
+  const navigate = useNavigate()
+
+  const navUpdate = (someUser) =>{
+    if (someUser){
+      navigate("/mainpage")
+
+    } else {
+      navigate("/welcome")
     }
   }
-  
-  // states///////////////////////////////////////
-  const [goHere, setGoHere] = useState(defaultURL)
 
-  const [curEvents, updateCurEvents] = useState(() => <EventDisplay title={'No Events'} description = {'¯\\_(ツ)_/¯'}/>)
 
-  // end the states//////////////////////////////
 
-  useEffect( ()=> {
-    giveMeEvents()
+  useEffect(() => {
+    onAuthStateChanged(auth, (currentUser) => {
+      console.log(auth)
+      setCurUser(currentUser)
+      navUpdate(currentUser)
+    })
   }, [])
-  const todayDate = new Date()
+  //const [curEvents, updateCurEvents] = useState(() => <EventDisplay title={'No Events'} description = {'¯\\_(ツ)_/¯'}/>)
+
+
 
   return (
-    <div className= 'App'>
-      <header className= 'App-header'>Colorado Springs Computer Science Calendar Scheduler</header>
-      <h2>Welcome!</h2>
-      <Calendar/>
-      <h3>Server to check <ServerSubmit/></h3>
-      <h2>Events for today:</h2>
-      <div className='eventSection'>
-        {curEvents}
-      </div>
+    <Routes>
+      <Route path="/" element= {<Navigate to='/welcome'/>}/>
+      <Route path="/welcome" element={<SignInPage/>}/>
+      <Route path="/mainpage" element= {<MainPage userLoggedIn={curUser}/>}/>
 
-    </div>
+    </Routes>
 
   )
 
