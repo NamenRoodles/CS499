@@ -10,7 +10,8 @@ import Logout from './Logout'
 import ServerSubmit from './ServerSubmit'
 
 
-const SignedIn = ({userLoggedIn}) => {
+const SignedIn = ({userLoggedIn, UserID}) => {
+    
   
     const giveMeEvents = async (first_try) => {
         try{
@@ -19,16 +20,14 @@ const SignedIn = ({userLoggedIn}) => {
           console.log("eventlog called")
           const eventlist = listOfEvents.map((item) => {
             return (
-              <EventDisplay title={item.title}
-               description = {item.description} date_time ={item.date_time} org_name = {item.org_name}
-               location = {item.location}/>
+              <EventDisplay event={item.event} date={item.date} time={item.time} description={item.description} venue={item.venue} tags={item.venue}/>
             )
           })
           console.log ("hi")
           updateCurEvents(eventlist)
         }catch(error){
           console.log('oops')
-          const emptyEvent = () => <EventDisplay title={'No Events'} description = {'¯\\_(ツ)_/¯'}/>
+          const emptyEvent = () => <EventDisplay event={'No Events'} description = {'¯\\_(ツ)_/¯'}/>
           updateCurEvents(emptyEvent)
         }
       }
@@ -41,7 +40,7 @@ const SignedIn = ({userLoggedIn}) => {
     
       // end the states//////////////////////////////
       useEffect( ()=> {
-        giveMeEvents()
+        giveMeEvents("http://127.0.0.1:8000/events/")
       }, [])
       const todayDate = new Date()
       return (
