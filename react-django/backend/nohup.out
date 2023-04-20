@@ -1,210 +1,149 @@
 Watching for file changes with StatReloader
 Performing system checks...
 
-System check identified no issues (0 silenced).
-April 19, 2023 - 19:46:57
+System check identified some issues:
+
+WARNINGS:
+?: (staticfiles.W004) The directory '/home/namenroodle/git/CS499/react-django/backend/static' in the STATICFILES_DIRS setting does not exist.
+
+System check identified 1 issue (0 silenced).
+April 20, 2023 - 15:00:59
 Django version 4.2, using settings 'backend.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 
-Not Found: /backend/
-[19/Apr/2023 19:48:21] "GET /backend/ HTTP/1.1" 404 2563
-[19/Apr/2023 19:48:48] "GET /events HTTP/1.1" 301 0
-[19/Apr/2023 19:48:48] "GET /events/ HTTP/1.1" 200 17564
-Watching for file changes with StatReloader
-Performing system checks...
-
-System check identified no issues (0 silenced).
-April 19, 2023 - 19:52:31
-Django version 4.2, using settings 'backend.settings'
-Starting development server at http://0.0.0.0:8000/
-Quit the server with CONTROL-C.
-
-Watching for file changes with StatReloader
-Performing system checks...
-
-System check identified no issues (0 silenced).
-April 19, 2023 - 19:57:53
-Django version 4.2, using settings 'backend.settings'
-Starting development server at http://0.0.0.0:8000/
-Quit the server with CONTROL-C.
-
-CommandError: "127.0.0.8000" is not a valid port number or address:port pair.
-Watching for file changes with StatReloader
-Performing system checks...
-
-System check identified no issues (0 silenced).
-April 19, 2023 - 20:01:19
-Django version 4.2, using settings 'backend.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CONTROL-C.
-
-Watching for file changes with StatReloader
-Performing system checks...
-
-System check identified no issues (0 silenced).
-April 19, 2023 - 20:02:29
-Django version 4.2, using settings 'backend.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CONTROL-C.
-
-Watching for file changes with StatReloader
-Performing system checks...
-
-System check identified no issues (0 silenced).
-Error: That port is already in use.
-Watching for file changes with StatReloader
-Performing system checks...
-
-System check identified no issues (0 silenced).
-Error: That port is already in use.
-[19/Apr/2023 20:12:24] "GET /events/ HTTP/1.1" 200 17564
-[19/Apr/2023 20:12:47] "GET /cities/ HTTP/1.1" 200 73
-Watching for file changes with StatReloader
-Performing system checks...
-
-System check identified no issues (0 silenced).
-April 19, 2023 - 20:43:41
-Django version 4.2, using settings 'backend.settings'
-Starting development server at http://0.0.0.0:8000/
-Quit the server with CONTROL-C.
-
-Invalid HTTP_HOST header: '35.209.255.177:8000'. You may need to add '35.209.255.177' to ALLOWED_HOSTS.
-Traceback (most recent call last):
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '35.209.255.177:8000'. You may need to add '35.209.255.177' to ALLOWED_HOSTS.
-Bad Request: /events/
-[19/Apr/2023 20:49:33] "GET /events/ HTTP/1.1" 400 64325
-Invalid HTTP_HOST header: '35.209.255.177:8000'. You may need to add '35.209.255.177' to ALLOWED_HOSTS.
-Traceback (most recent call last):
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '35.209.255.177:8000'. You may need to add '35.209.255.177' to ALLOWED_HOSTS.
-Bad Request: /favicon.ico
-[19/Apr/2023 20:49:33] "GET /favicon.ico HTTP/1.1" 400 64091
-Watching for file changes with StatReloader
-Performing system checks...
-
-System check identified no issues (0 silenced).
-April 19, 2023 - 20:58:38
-Django version 4.2, using settings 'backend.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CONTROL-C.
-
-Watching for file changes with StatReloader
-Performing system checks...
-
-System check identified no issues (0 silenced).
-Error: That port is already in use.
-Unknown command: '0.0.0.0.8000'
-Type 'manage.py help' for usage.
-Watching for file changes with StatReloader
-Performing system checks...
-
-System check identified no issues (0 silenced).
-April 19, 2023 - 21:43:37
-Django version 4.2, using settings 'backend.settings'
-Starting development server at http://0.0.0.0:8000/
-Quit the server with CONTROL-C.
-
-Invalid HTTP_HOST header: '35.209.255.177:8000'. You may need to add '35.209.255.177' to ALLOWED_HOSTS.
-Traceback (most recent call last):
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '35.209.255.177:8000'. You may need to add '35.209.255.177' to ALLOWED_HOSTS.
-Bad Request: /cities/
-[19/Apr/2023 21:43:55] "GET /cities/ HTTP/1.1" 400 64367
-Invalid HTTP_HOST header: '35.209.255.177:8000'. You may need to add '35.209.255.177' to ALLOWED_HOSTS.
-Traceback (most recent call last):
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '35.209.255.177:8000'. You may need to add '35.209.255.177' to ALLOWED_HOSTS.
-Bad Request: /favicon.ico
-[19/Apr/2023 21:43:56] "GET /favicon.ico HTTP/1.1" 400 64133
+Not Found: /
+[20/Apr/2023 15:04:05] "GET / HTTP/1.1" 404 2521
+[20/Apr/2023 15:04:15] "GET /cities HTTP/1.1" 301 0
 /home/namenroodle/git/CS499/react-django/backend/backend/settings.py changed, reloading.
 Watching for file changes with StatReloader
 Performing system checks...
 
-System check identified no issues (0 silenced).
-April 19, 2023 - 21:45:04
+System check identified some issues:
+
+WARNINGS:
+?: (staticfiles.W004) The directory '/home/namenroodle/git/CS499/react-django/backend/static' in the STATICFILES_DIRS setting does not exist.
+
+System check identified 1 issue (0 silenced).
+April 20, 2023 - 15:08:49
 Django version 4.2, using settings 'backend.settings'
-Starting development server at http://0.0.0.0:8000/
+Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 
-Invalid HTTP_HOST header: '35.209.255.177:8000'. You may need to add '35.209.255.177' to ALLOWED_HOSTS.
-Traceback (most recent call last):
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '35.209.255.177:8000'. You may need to add '35.209.255.177' to ALLOWED_HOSTS.
-Bad Request: /cities/
-[19/Apr/2023 21:45:12] "GET /cities/ HTTP/1.1" 400 64415
-Invalid HTTP_HOST header: '35.209.255.177:8000'. You may need to add '35.209.255.177' to ALLOWED_HOSTS.
-Traceback (most recent call last):
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '35.209.255.177:8000'. You may need to add '35.209.255.177' to ALLOWED_HOSTS.
-Bad Request: /favicon.ico
-[19/Apr/2023 21:45:13] "GET /favicon.ico HTTP/1.1" 400 64181
-Invalid HTTP_HOST header: '35.209.255.177:8000'. You may need to add '35.209.255.177' to ALLOWED_HOSTS.
-Traceback (most recent call last):
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '35.209.255.177:8000'. You may need to add '35.209.255.177' to ALLOWED_HOSTS.
-Bad Request: /cities/
-[19/Apr/2023 21:47:14] "GET /cities/ HTTP/1.1" 400 64415
-Invalid HTTP_HOST header: '35.209.255.177:8000'. You may need to add '35.209.255.177' to ALLOWED_HOSTS.
-Traceback (most recent call last):
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
-    response = get_response(request)
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
-    response = self.process_request(request)
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
-    host = request.get_host()
-  File "/home/namenroodle/miniconda3/lib/python3.10/site-packages/django/http/request.py", line 167, in get_host
-    raise DisallowedHost(msg)
-django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '35.209.255.177:8000'. You may need to add '35.209.255.177' to ALLOWED_HOSTS.
-Bad Request: /favicon.ico
-[19/Apr/2023 21:47:15] "GET /favicon.ico HTTP/1.1" 400 64181
+[20/Apr/2023 15:09:02] "GET /cities HTTP/1.1" 301 0
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified some issues:
+
+WARNINGS:
+?: (staticfiles.W004) The directory '/home/namenroodle/git/CS499/react-django/backend/static' in the STATICFILES_DIRS setting does not exist.
+
+System check identified 1 issue (0 silenced).
+April 20, 2023 - 15:11:04
+Django version 4.2, using settings 'backend.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+[20/Apr/2023 15:11:17] "GET /events HTTP/1.1" 301 0
+Not Found: /
+[20/Apr/2023 15:15:48] "GET / HTTP/1.0" 404 2521
+Not Found: /console/
+[20/Apr/2023 15:19:21] "GET /console/ HTTP/1.0" 404 2563
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified some issues:
+
+WARNINGS:
+?: (staticfiles.W004) The directory '/home/namenroodle/git/CS499/react-django/backend/static' in the STATICFILES_DIRS setting does not exist.
+
+System check identified 1 issue (0 silenced).
+April 20, 2023 - 15:22:35
+Django version 4.2, using settings 'backend.settings'
+Starting development server at http://localhost:9000/
+Quit the server with CONTROL-C.
+
+[20/Apr/2023 15:23:20] "GET /cities HTTP/1.1" 301 0
+Method Not Allowed: /cities/
+[20/Apr/2023 15:26:14] "HEAD /cities/ HTTP/1.0" 405 0
+Not Found: /Autodiscover/Autodiscover.xml
+[20/Apr/2023 15:28:23] "POST /Autodiscover/Autodiscover.xml HTTP/1.0" 404 2627
+Not Found: /_ignition/execute-solution
+[20/Apr/2023 15:35:44] "GET /_ignition/execute-solution HTTP/1.0" 404 2617
+/home/namenroodle/git/CS499/react-django/backend/backend/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified some issues:
+
+WARNINGS:
+?: (staticfiles.W004) The directory '/home/namenroodle/git/CS499/react-django/backend/static' in the STATICFILES_DIRS setting does not exist.
+
+System check identified 1 issue (0 silenced).
+April 20, 2023 - 15:35:46
+Django version 4.2, using settings 'backend.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+/home/namenroodle/git/CS499/react-django/backend/backend/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified some issues:
+
+WARNINGS:
+?: (staticfiles.W004) The directory '/home/namenroodle/git/CS499/react-django/backend/static' in the STATICFILES_DIRS setting does not exist.
+
+System check identified 1 issue (0 silenced).
+April 20, 2023 - 15:35:47
+Django version 4.2, using settings 'backend.settings'
+Starting development server at http://localhost:9000/
+Quit the server with CONTROL-C.
+
+Method Not Allowed: /cities/
+[20/Apr/2023 15:36:10] "HEAD /cities/ HTTP/1.0" 405 0
+Not Found: /
+[20/Apr/2023 15:37:23] "GET / HTTP/1.0" 404 2521
+/home/namenroodle/git/CS499/react-django/backend/backend/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified some issues:
+
+WARNINGS:
+?: (staticfiles.W004) The directory '/home/namenroodle/git/CS499/react-django/backend/static' in the STATICFILES_DIRS setting does not exist.
+
+System check identified 1 issue (0 silenced).
+April 20, 2023 - 15:38:43
+Django version 4.2, using settings 'backend.settings'
+Starting development server at http://localhost:9000/
+Quit the server with CONTROL-C.
+
+/home/namenroodle/git/CS499/react-django/backend/backend/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified some issues:
+
+WARNINGS:
+?: (staticfiles.W004) The directory '/home/namenroodle/git/CS499/react-django/backend/static' in the STATICFILES_DIRS setting does not exist.
+
+System check identified 1 issue (0 silenced).
+April 20, 2023 - 15:38:44
+Django version 4.2, using settings 'backend.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+Method Not Allowed: /cities/
+[20/Apr/2023 15:38:46] "HEAD /cities/ HTTP/1.0" 405 0
+Not Found: /
+[20/Apr/2023 15:56:44] "GET / HTTP/1.0" 404 2521
+Not Found: /
+[20/Apr/2023 15:59:29] "GET / HTTP/1.0" 404 2521
+Not Found: /actuator/gateway/routes
+[20/Apr/2023 16:00:04] "GET /actuator/gateway/routes HTTP/1.0" 404 2608
+Not Found: /
+[20/Apr/2023 16:02:35] "GET / HTTP/1.0" 404 2521
+Not Found: /geoserver
+[20/Apr/2023 16:27:24] "GET /geoserver HTTP/1.0" 404 2566
