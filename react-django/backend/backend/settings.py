@@ -45,10 +45,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework'
+    'rest_framework',
+	'corsheaders'
 ]
 
 MIDDLEWARE = [
+	'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -56,6 +58,16 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOW_METHODS = [
+	"DELETE",
+	"GET",
+	"OPTIONS",
+	"PATCH",
+	"POST",
+	"PUT",
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -111,6 +123,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+#CORS validation section
+#CORS_ALLOWED_ORIGINS = [
+#	"http://localhost:3000",
+# 	"https://cscscs-a1c2f.firebaseapp.com"
+#
+# ]
+REST_FRAMEWORK = {'DEFAULT_PERMISSION_CLASSES':
+				['rest_framework.permissions.AllowAny']}
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
@@ -127,8 +147,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, '/static')
+STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, '/static')
+STATIC_ROOT = '/var/www/35.209.255.177/static'
+STATICFILES_DIRS = [BASE_DIR / "static"]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
