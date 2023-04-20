@@ -7,7 +7,6 @@ import Calendar from './Calendar'
 import EventDisplay from './EventDisplay'
 import axios from 'axios'
 import Logout from './Logout'
-import ServerSubmit from './ServerSubmit'
 
 
 const SignedIn = ({userLoggedIn, UserID}) => {
@@ -18,9 +17,11 @@ const SignedIn = ({userLoggedIn, UserID}) => {
           const response = await axios.get(first_try)
           const listOfEvents = response.data
           console.log("eventlog called")
+          console.log(`This is the list of events: ${listOfEvents}`)
           const eventlist = listOfEvents.map((item) => {
+            console.log(`Heres from Main Page: This is what item.tags looks like...${item.tags}`)
             return (
-              <EventDisplay event={item.event} date={item.date} time={item.time} description={item.description} venue={item.venue} tags={item.venue}/>
+              <EventDisplay event={item.event} date={item.date} time={item.time} description={item.description} venue={item.venue} tags={item.tags}/>
             )
           })
           console.log ("hi")
@@ -40,17 +41,21 @@ const SignedIn = ({userLoggedIn, UserID}) => {
     
       // end the states//////////////////////////////
       useEffect( ()=> {
-        giveMeEvents("http://127.0.0.1:8000/events/")
+        giveMeEvents("http://35.209.255.177/events/")
       }, [])
       const todayDate = new Date()
       return (
         <div className= 'App'>
-          <header className= 'App-header'>Colorado Springs Computer Science Calendar Scheduler</header>
+          <header className= 'App-header'>Find Your Fun Today!</header>
           <Logout/>
           <h2>Welcome! Logged in as: {userLoggedIn.email}</h2>
+          <div>
           <Calendar/>
-          
+          </div>
+          <div className={"event-header"}>
           <h2>Events for today:</h2>
+
+          </div>
           <div className='eventSection'>
             {curEvents}
           </div>

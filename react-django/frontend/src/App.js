@@ -5,7 +5,6 @@ import Calendar from './components/Calendar'
 import './App.css';
 import EventDisplay from './components/EventDisplay'
 import axios from 'axios'
-import ServerSubmit from './components/ServerSubmit'
 import MainPage from './components/MainPage'
 import SignInPage from './components/SignInPage';
 
