@@ -3,7 +3,7 @@ import json
 
 def movethis():
 
-    with open('./events.json', "r") as fileopen:
+    with open('events.json', "r") as fileopen:
         events = json.load(fileopen)
 
     #add functionality later to query or get the fk of cities, for now hardcoded
@@ -12,8 +12,8 @@ def movethis():
     for event in events:
         taglist = event["Tags"].split(",")
         newEvent = Events(event= event["EventName"], date=event["Date"], time=event["Time"],
-                        description=event["Description"], city_fk=springs, venue= event["Venue"],
-                            hash=event["hash"], tags=taglist)
+                        description=event["Description"], venue=event["Venue"],
+                        tags=taglist)
         newEvent.save()
 
 #json format
@@ -24,7 +24,6 @@ def movethis():
     #     "Description": "",
     #     "City": "Colorado Springs, CO",
     #     "Venue": "",
-    #     "hash": 8567565638966680411,
     #     "Tags": ""
     # }
 

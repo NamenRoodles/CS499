@@ -41,16 +41,13 @@ class Events(models.Model):
                 lazy('%(value)s is not a valid time format'),
                 params={'value': value},
             )
-
-
     event = models.CharField(max_length=255, blank=True, null=True)
     date = models.DateField(blank=True, null=True)
     time = models.CharField(max_length=255, blank=True, null=True, validators=[validate_time])
     description = models.TextField(blank=True, null=True)
-    city_fk = models.ForeignKey(Cities, models.DO_NOTHING, db_column='city_fk', blank=True, null=True)
     venue = models.CharField(max_length=255, blank=True, null=True)
-    hash = models.DecimalField(primary_key=True, max_digits=65535, decimal_places=65535)
     tags = ArrayField(models.CharField(max_length=50, blank = True, null=True))  # This field type is a guess.
+    event_id = models.AutoField(primary_key=True)
 
     class Meta:
         managed = False
@@ -67,6 +64,16 @@ class Users(models.Model):
     class Meta:
         managed = False
         db_table = 'users'
+
+
+class UsersEvents(models.Model):
+    id = models.AutoField(primary_key=True)
+    user_id = models.BigIntegerField()
+    event_id = models.BigIntegerField()
+
+    class Meta:
+        managed = False
+        db_table = 'users_events'
 
 
 
