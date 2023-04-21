@@ -4,7 +4,7 @@ import { auth } from "../fire-config"
 import './sip.css'
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth'
 
-const SignInPage = ({setUser}) => {
+const SignInPage = ({setUser, setNewUser}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isSigningUp, setIsSigningUp] = useState(false);
@@ -16,6 +16,7 @@ const SignInPage = ({setUser}) => {
 
       if (isSigningUp === true){
         //new account being created
+        setNewUser(true)
         console.log("Sign Up Mode")
         try {
           const user = await createUserWithEmailAndPassword(

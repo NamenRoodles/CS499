@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from csdb.models import Cities, Events, Users
+from csdb.models import Cities, Events, Users, UsersEvents
 
 class CitiesSerializer(serializers.ModelSerializer):
     class Meta:
@@ -13,4 +13,9 @@ class EventsSerializer(serializers.ModelSerializer):
 class UsersSerializer(serializers.ModelSerializer):
     class Meta:
         model = Users
+        fields = '__all__'
+
+class UESerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UsersEvents
         fields = '__all__'

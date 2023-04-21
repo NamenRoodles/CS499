@@ -1,11 +1,23 @@
 import React from 'react'
 import './EventDisplay.css'
+import { useState } from 'react'
 
 
 
-const EventDisplay = ({event, date, time, description, venue, tags}) => {
+const EventDisplay = ({event, date, time, description, venue, tags, event_id, add_ev, sub_ev}) => {
 console.log(`This is the tags array: ${tags}`)
+const [buttonToggle, setButtonToggle] = useState(false)
+//on change of toggle, the list held in main page should change accordingly
 
+const handleIt = (event) => {
+  setButtonToggle(!buttonToggle)
+  if (buttonToggle === false){
+    add_ev(event_id)
+  }
+  else{
+    sub_ev(event_id)
+  }
+}
 if(typeof tags === "undefined") {
   tags = [""]
 }
@@ -28,7 +40,7 @@ if(typeof tags === "undefined") {
           }
         </div>
       </div>
-      <button>Add to Calendar</button>
+      <button onClick={handleIt}>{buttonToggle?"Remove from Calendar":"Add to Calendar"}</button>
     </div>
   );
 }

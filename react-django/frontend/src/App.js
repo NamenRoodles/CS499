@@ -19,6 +19,7 @@ function App() {
   //const [auth, setAuth] = useState(FireAuth)
   const [isLoggedIn, setIsLoggedIn] =  useState(false)
   const [curUser, setCurUser] = useState({})
+  const [isNewUser, setIsNewUser] = useState(false)
 
 
   const navigate = useNavigate()
@@ -32,6 +33,28 @@ function App() {
     }
   }
 
+  const  getRandomInt = (max)=>  {
+    return Math.floor(Math.random() * max);
+  }
+  
+
+
+  const insertUserDB = async (email, changeNewUserState) => {
+    try{
+      const response = await axios.post("http://35.209.255.177/events/", {
+        uid: getRandomInt(5000),
+        email: email,
+        username: "bobert",
+        calendar: "not yet",
+        location: "Colorado Springs"
+      })
+      changeNewUserState(false)
+    }catch (error){
+      console.log(`happened in app.js`)
+      console.error(error)
+    }
+
+  }
 
 
   useEffect(() => {
@@ -39,6 +62,10 @@ function App() {
       console.log(auth)
       setCurUser(currentUser)
       navUpdate(currentUser)
+      if (isNewUser === true){
+        insertUserDB(curUser.email, setIsNewUser)
+    }
+
     })
   }, [])
   //const [curEvents, updateCurEvents] = useState(() => <EventDisplay title={'No Events'} description = {'¯\\_(ツ)_/¯'}/>)
@@ -48,7 +75,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element= {<Navigate to='/welcome'/>}/>
-      <Route path="/welcome" element={<SignInPage/>}/>
+      <Route path="/welcome" element={<SignInPage userStatus={setCurUser} setNewUser={setIsNewUser}/>}/>
       <Route path="/mainpage" element= {<MainPage userLoggedIn={curUser}/>}/>
 
     </Routes>
