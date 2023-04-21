@@ -6,6 +6,6 @@ urlpatterns = [
     path('events/', views.getEvents),
     path('users/', views.getUsers),
     path('addUser/', views.makeNewUser),
-    path('gtc/', views.getTheCalendar),
-    path('aot', views.addEventToUser)
+    path('gtc/', views.getTheCalendar, name='get_calendar'),
+    path('aot/', views.addEventToUser)
 ]

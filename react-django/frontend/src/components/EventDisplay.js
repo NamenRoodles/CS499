@@ -5,7 +5,6 @@ import { useState } from 'react'
 
 
 const EventDisplay = ({event, date, time, description, venue, tags, event_id, add_ev, sub_ev}) => {
-console.log(`This is the tags array: ${tags}`)
 const [buttonToggle, setButtonToggle] = useState(false)
 //on change of toggle, the list held in main page should change accordingly
 

@@ -30,10 +30,7 @@ const SignedIn = ({userLoggedIn, UserID}) => {
         try{
           const response = await axios.get(first_try)
           const listOfEvents = response.data
-          console.log("eventlog called")
-          console.log(`This is the list of events: ${listOfEvents}`)
           const eventlist = listOfEvents.map((item) => {
-            console.log(`Heres from Main Page: This is what item.tags looks like...${item.tags}`)
             return (
               <EventDisplay event={item.event} date={item.date} time={item.time} 
               description={item.description} venue={item.venue} tags={item.tags} event_id={item.event_id} add_ev={addUserEvent} sub_ev={removeUserEvent} usrEvents={userEvents}/>

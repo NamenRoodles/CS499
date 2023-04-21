@@ -16,7 +16,6 @@ const SignInPage = ({setUser, setNewUser}) => {
 
       if (isSigningUp === true){
         //new account being created
-        setNewUser(true)
         console.log("Sign Up Mode")
         try {
           const user = await createUserWithEmailAndPassword(
@@ -24,6 +23,8 @@ const SignInPage = ({setUser, setNewUser}) => {
           )
           alert(`New user created! ${user}`)
           setUser(user)
+          setNewUser()
+
         } catch(error){
           if(error.code === "auth/email-already-in-use"){
             alert("Email already taken! Choose another")

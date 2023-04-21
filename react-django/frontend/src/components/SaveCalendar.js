@@ -5,7 +5,7 @@ const SaveCalendar = ({useremail, eventlist}) => {
         console.log(`Sent calendar off`)
         //here is the point where we send this off to the backend
         try{
-          const response = await axios.post('"http://35.209.255.177/aot/',{
+          const response = await axios.post('http://35.209.255.177/aot',{
             email : useremail,
             events : eventlist 
           })

@@ -1,0 +1,35 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ChatGPT//Event Calendar//EN
+CALSCALE:GREGORIAN
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Denver:20230411T200000
+DTEND;TZID=America/Denver:20230411T220000
+SUMMARY:KaraSmokey Karaoke Club
+LOCATION:Speak Easy Vape Lounge and Cannabis Club, Colorado Springs, CO
+DESCRIPTION:Drinking, Music
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Denver:20230412T080000
+DTEND;TZID=America/Denver:20230412T090000
+SUMMARY:Guatemala: Our Culture is Our Resistance Gallery Exhibition & Lecture
+LOCATION:Downtown Campus, Studio West Gallery, Colorado Springs, CO
+DESCRIPTION:Documentary photographer Jonathan Moller shares his powerful work. Show runs March 13-April 21.The college will host a reception on Friday, April 7, from 5-8pm. The artist will speak about the struggles of the Guatemalan people and his artistic process at 6 pm. All welcome, admission is free, light refreshments provided. Qs: benjy.davies@pikespeak.edu Virtual Event Link: https://www.pikespeak.edu/academics/studio-west/art-gallery.php\nArt, Educational
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Denver:20230412T093000
+DTEND;TZID=America/Denver:20230412T113000
+SUMMARY:Cheyenne Mountain Newcomers Club
+LOCATION:Broadmoor Community Church, Colorado Springs, CO
+DESCRIPTION:Cheyenne Mountain Newcomers Club is a social club for women of all ages and backgrounds residing in the Colorado Springs area. We are not religiously or politically affiliated. Our purpose is to welcome women new or long time residents of Colorado Springs. We have multiple activity groups ranging from but not limited to, reading clubs, hiking clubs, gourmet food and games. Find us on facebook at Cheyenne Mountain Newcomers Club or attend one of our monthly meetings. Annual member dues are $30/year. Two events can be attended before joining.
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/Denver:20230412T100000
+DTEND;TZID=America/Denver:20230412T180000
+SUMMARY:Eiko Otake: I Invited Myself, Vol. II
+LOCATION:Colorado Springs Fine Arts Center at Colorado College, Colorado Springs, CO
+DESCRIPTION:Movement is fundamental to the artist Eiko Otake, who uses her body to explore themes of mortality, time, and place. Growing up in post-World War II Japan, Otake studied dance and performance in Europe before moving to New York in 1976. For more than four decades, she was part of Eiko & Koma, a collaborative that created performance, choreography, visual design, sound, videos, and texts. Since 2014, Otake has worked as a soloist and has directed her own projects in collaboration with other artists. Otake’s first museum solo-exhibition, I Invited Myself, Vol. II, foregrounds the artist’s video and media, which have developed alongside her dance, choreography, and performance installations. Spanning from 1980 to the present, the works on view feature a body as it moves in and through various spaces, including the urban infrastructure of
