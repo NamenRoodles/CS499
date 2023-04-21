@@ -8,7 +8,7 @@ class CitiesSerializer(serializers.ModelSerializer):
 class EventsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Events
-        fields = ['event', 'date', 'time', 'description', 'city_fk', 'venue', 'tags']
+        fields = ['event', 'date', 'time', 'description', 'venue', 'tags', 'event_id']
 
 class UsersSerializer(serializers.ModelSerializer):
     class Meta:
